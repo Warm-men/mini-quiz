@@ -1,0 +1,9 @@
+<view class="index-container">
+  <image class="index-bg" src="./images/home_bg.jpg" mode='cover'></image>
+  <view class="index-btns-box">
+    <button wx:if="{{prizeRecore}}" open-type="getUserInfo" bindgetuserinfo='gotoResult' class="index-btn">
+      <image class='index-btn-bg' src="./images/my_prize_btn.png" ></image>
+    </button>
+  </view>
+  <view class="hint">竞答活动已结束，感谢您的参与！</view>
+</view>

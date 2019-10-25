@@ -1,0 +1,29 @@
+<view class='lottery-container'>
+  <image class="lottery-bg" src="./images/quiz_bg.jpg" mode='cover'></image>
+  <scroll-view class="scroll-view" scroll-y>
+    <view 
+      class="question-box {{index === 0 ? 'clear-margin' : ''}}"
+      wx:for="{{array}}" 
+      wx:key="value" 
+      wx:for-item="value"
+      wx:for-index="index"
+    >
+      <text class='description'>{{index + 1}}.{{value.description}}</text>
+      <button 
+        bindtap="selectAnswer" 
+        data-select="{{select.key}}"
+        data-id="{{value.id}}"  
+        wx:for="{{value.select_set}}" 
+        wx:key="select" 
+        wx:for-item="select"
+        class="default-btn {{selectArr[value.id] === select.key ? 'active' : '' }}"
+      >
+        {{select.key}}.
+        {{select.value}}
+      </button>
+    </view>
+  </scroll-view>
+  <button class='submit-btn' bindtap="postAnswer">
+    <image class='submit-btn-bg' src="./images/submit_btn.png"></image>
+  </button>
+</view>

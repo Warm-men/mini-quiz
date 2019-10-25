@@ -1,0 +1,47 @@
+<!--pages/prize/prize.wxml-->
+<view class="prize-container">
+  <view class="bg-view">
+    <image class="page-bg-image" src="./images/prize_page_bg.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
+  </view>
+  <view class="prize-image-view">
+   <image wx:if="{{prizeData.prize_key === 'huawei_mate'}}" class="prize1-image" src="./images/huawei_mate.png"></image>
+   <image wx:if="{{prizeData.prize_key === 'laxiang'}}" class="prize2-image" src="./images/trunk_lid.png"></image>
+   <image wx:if="{{prizeData.prize_key === 'huafei'}}" class="prize3-image" src="./images/ticket.png"></image>
+  </view>
+  <text wx:if="{{prizeData.prize_key === 'huawei_mate'}}" class="prize-title-text">一等奖华为手机mate 20 pro 一台（颜色随机）</text>
+  <text wx:if="{{prizeData.prize_key === 'laxiang'}}" class="prize-title-text">二等奖<br/>外交官拉杆箱一个（颜色随机）</text>
+  <text wx:if="{{prizeData.prize_key === 'huafei'}}" class="prize-title-text">幸运奖20元话费</text>
+  <view wx:if="{{prizeData.prize_key === 'huawei_mate'}}" class="view-wrapper"> 
+    <view class="tips-view">
+      <text class="tips">温馨提示：</text>
+    </view>
+    <scroll-view class="tips-scroll" scroll-y>
+      <view class="tips-text">{{tipsText}}</view>
+      <view class="tips-text">在法律允许范围内，该活动的最终解释权归深圳农村商业银行所有。</view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{prizeData.prize_key === 'laxiang'}}" class="view-wrapper">
+    <view class="tips-view">
+      <text class="tips">温馨提示：</text>
+    </view>
+    <scroll-view class="tips-scroll" scroll-y>
+      <view class="tips-text">{{tipsText}}</view>
+      <view class="tips-text">在法律允许范围内，该活动的最终解释权归深圳农村商业银行所有。</view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{prizeData.prize_key === 'huafei'}}" class="view-wrapper">
+    <view class="tips-view">
+      <text class="tips">温馨提示：</text>
+    </view>
+    <scroll-view class="tips-scroll" scroll-y>
+      <view class="tips-text">我们将于活动结束后的7个工作日内将中奖话费充入您填写的手机号码，充值成功将有运营商短信通知。如有疑问，请联系客服电话：961200（深圳）、4001961200（全国）。</view>
+      <view class="tips-text">在法律允许范围内，该活动的最终解释权归深圳农村商业银行所有。</view>
+    </scroll-view>
+  </view>
+  <view class="index-btns-box">
+    <button open-type="getUserInfo" bindgetuserinfo='backHome' class="index-btn">
+      <image class='index-btn-bg' src="./images/go-home-btn.png" ></image>
+    </button>
+  </view>
+</view>
+

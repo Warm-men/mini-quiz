@@ -1,0 +1,62 @@
+.lottery-container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+button::after {
+  border: none
+}
+.lottery-bg{
+  width: 100vw;
+  height: 100vh;
+}
+.scroll-view{
+  width: 72vw;
+  height: 68vh;
+  position: absolute;
+  left: 14vw;
+  top:14vh;
+}
+.question-box{
+  margin-top: 15px;
+}
+.clear-margin{
+  margin-top:0px;
+}
+.description{
+  color: #fff;
+  font-size: 13px;
+  line-height: 18p;
+}
+.default-btn{
+  background-color: unset;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  margin-top: 10px;
+  text-align: left;
+  line-height: 20px;
+  padding:5px 20px;
+  font-size: 12px;
+}
+.active{
+  background-color: #fff;
+  color: #74adf9;
+  border:none;
+  border: 1px solid #fff;
+}
+.submit-btn{
+  position:absolute;
+  bottom:10vw;
+  left:35vw;
+  background-color:unset;
+  width: 30vw;
+  height: 12vw;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.submit-btn-bg{
+  width: 30vw;
+  height: 12vw;
+}
