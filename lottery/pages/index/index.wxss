@@ -1,0 +1,50 @@
+/**index.wxss**/
+.index-container {
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+button::after {
+  border: none
+}
+.index-bg{
+  width:100vw;
+  height: 100vh;
+}
+.index-btns-box{
+  position:absolute;
+  left:0px;
+  width:100vw;
+  height:44px;
+  display:flex;
+  justify-content:space-around;
+  bottom:5vh;
+}
+.index-btn{
+  width:100px;
+  height:40px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color:unset;
+
+}
+.index-btn-bg{
+  width:100px;
+  height: 40px;
+}
+.hint {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  padding: 5px;
+  border-raduis: 3px;
+  background-color: #333;
+  position: absolute;
+  z-index: 111;
+  width: 60vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

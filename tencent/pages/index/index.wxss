@@ -1,0 +1,35 @@
+/**index.wxss**/
+.index-container {
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+button::after {
+  border: none
+}
+.index-bg{
+  width:100vw;
+  height: 100vh;
+}
+.index-btns-box{
+  position:absolute;
+  left:0px;
+  width:100vw;
+  height:44px;
+  display:flex;
+  justify-content:space-around;
+  bottom:9vh;
+}
+.index-btn{
+  width:30vw;
+  height:12vw;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color:unset;
+
+}
+.index-btn-bg{
+  width:30vw;
+  height:12vw;
+}

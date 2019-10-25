@@ -1,0 +1,49 @@
+<!--logs.wxml-->
+<view class="result-view">
+  <image class="result-image" src="./images/prize_page_bg.jpg"></image>
+  <view class="image-view">
+    <view >
+      <view class="recore-view">
+        <text class="recore-text">{{totalScore}}</text>
+        <text class="description">{{totalScoreTitle}}</text>
+        <text class="description-sub">{{totalScoreText}}</text>
+      </view>
+      <image class="doll-image" src="{{dollImageUrl}}"></image>
+    </view>
+    <view class="index-btns-box">
+      <button wv:if="{{!!winningCode}}" bindtap="openPrizePop" class="index-btn">
+        <image class='index-btn-bg' src="./images/get_prize_btn.png" ></image>
+      </button>
+      <button  bindtap="backHome" class="index-btn">
+        <image class='index-btn-bg' src="./images/go_home_btn.png" ></image>
+      </button>
+    </view>
+    <scroll-view class="scroll-view" scroll-y>
+      <view class="question-box" wx:for="{{array}}" wx:key="value" wx:for-index="index" wx:for-item="value">
+        <text class='description'>{{index + 1}}.{{value.description}}</text>
+        <text class="default-btn">{{value.description}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{isShocwPop}}" class="get-prize-view">
+    <view class="get-prize-wrapper">
+      <view class="scroll-title-view">
+        <view class="line"> </view>
+        <text class="scroll-title-text">领奖方式</text>
+        <view class="line"> </view>
+      </view>
+      <view class="tip-view">
+        <text class="tip-text">凭借兑换码于3月15日 12:00-14:00，腾 讯滨海大厦东广场现场兑奖处领取奖品。</text>
+      </view>
+      <text class="prize-title-text">兑换码</text>
+      <view class="prize-id-view">
+        <text class="prize-id-text">{{winningCode}}</text>
+      </view>
+      <view class="pop-btns-box">
+        <button bindtap="closePop" class="pop-btn">
+          <image class='pop-btn-bg' src="./images/back_btn.png" ></image>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

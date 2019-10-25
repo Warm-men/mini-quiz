@@ -1,0 +1,150 @@
+button::after {
+  border: none
+}
+.present-container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color:#fff;
+  text-align: center;
+}
+.present-bg{
+  width: 100vw;
+  height: 100vh;
+}
+.present-address{
+  position: absolute;
+  top:52vh;
+  left:8vw;
+}
+.input-box{
+  display: flex;
+  margin-top:15px;
+  justify-content: center;
+  align-items: center;
+}
+.input-title{
+  color:#fff;
+  width:24vw;
+  text-align:right;
+  margin-right:3vw;
+  font-size:14px;
+}
+.input{
+  border:1px solid #fff;
+  border-radius: 5px;
+  width:50vw;
+  font-size:14px;
+}
+.present-img-box{
+  position:absolute;
+  top:7vh;
+  left:0px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  width:100vw;
+  align-items:center;
+}
+.thank-img{
+  width:60vw;
+  height:55vw;
+  margin-top:10vw;
+}
+.submit-btn{
+  position:fixed;
+  bottom:8vw;
+  left:35vw;
+  background-color:unset;
+  width: 100px;
+  height: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.submit-btn-bg{
+  width: 100px;
+  height: 40px;
+}
+.picker-box{
+  display: flex;
+  margin-top:15px;
+  align-items:center;
+  justify-content: center;
+}
+.picker-title{
+  width:24vw;
+  margin-right:3vw;
+  display:inline-block;
+  position:relative;
+  text-align:right;
+  top:-10px;
+}
+.picker-title-has-picked{
+  width:24vw;
+  margin-right:3vw;
+  display:inline-block;
+  position:relative;
+  text-align:right;
+}
+.picker-title-text{
+  color:#fff;
+  width:24vw;
+  text-align:right;
+  font-size:14px;
+}
+.picker{
+  border:1px solid #fff;
+  border-radius: 5px;
+  width:50vw;
+  min-height:1.4rem;
+  display:inline-block;
+  font-size:14px;
+  line-height: 25px;
+}
+.loading-present{
+  position:absolute;
+  left:25vw;
+  top:30vh;
+  width:50vw;
+  height:45vw;
+}
+.present-title-text-box-view {
+  line-height: 20px;
+  padding-left: 34px;
+}
+.present-title-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.laxiang {
+  width:80px;
+  height:156px;
+  margin-top:27px;
+}
+.laxiang_title{
+  width:251px;
+  height:51px;
+  margin-top:20px;
+}
+.huafei {
+  width:100px;
+  height:50px;
+  margin-top:32vw;
+}
+.huafei_title{
+  width:199px;
+  height:65px;
+  margin-top:20px;
+}
+.huawei_mate {
+  width:64px;
+  height:134px;
+  margin-top:50px;
+}
+.huawei_mate_title{
+  width:257px;
+  height:46px;
+  margin-top:20px;
+}

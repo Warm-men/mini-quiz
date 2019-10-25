@@ -1,0 +1,24 @@
+<!--logs.wxml-->
+<view class="result-container">
+  <!---bg-view--->
+  <view class="bg-view">
+    <image class="page-bg-image" src="./images/pure_bg.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false"></image>
+  </view>
+  <view class="doll-view">
+      <view class="pop-view">
+          <image class="pop-image" src="./images/pop.png"></image>
+          <view class="recore-view">
+            <text class="recore-text-sub">{{totalScoreText}}</text>
+          </view>
+        </view>
+      <image class="doll-image" src="{{dollImageUrl}}"></image>
+      <view class="index-btns-box">
+        <button wx:if="{{firstWin && totalScore >= 30}}" bindtap="goDrawing" class="index-btn">
+          <image class='index-btn-bg' src="./images/drawing_btn.png" ></image>
+        </button>
+        <button bindtap="backHome"  class="index-btn">
+          <image class='index-btn-bg' src="./images/try_again_btn.png" ></image>
+        </button>
+      </view>
+  </view>
+</view>

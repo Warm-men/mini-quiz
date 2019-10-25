@@ -1,0 +1,11 @@
+<view class="index-container">
+  <image class="index-bg" src="./images/bg.jpg" mode='cover'></image>
+  <view class="index-btns-box">
+    <button open-type="getUserInfo" bindgetuserinfo="enterLottery" class="index-btn">
+      <image class='index-btn-bg' src="./images/home_btn1.png" ></image>
+    </button>
+    <button wx:if="{{winningCode}}" open-type="getUserInfo" bindgetuserinfo='gotoResult' class="index-btn">
+      <image class='index-btn-bg' src="./images/home_btn2.png" ></image>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+<view class='present-container'>
+  <image class="present-bg" src="./images/prize_page_bg.jpg" mode='cover'></image>
+  <block wx:if="{{isShowResult}}">
+    <view class="present-img-box">
+      <image class="{{img1_class}}" src="{{present_img1}}" ></image>
+      <image class="{{img2_class}}" src="{{present_img2}}" ></image>
+    </view>
+    <view class="present-address">
+      <view wx-if="{{!isShowGotoIndex}}" class="present-title-text-box-view">
+        <text class="present-title-text">请输入以下领奖信息</text>
+      </view>
+      <block wx:if="{{isShowAddress}}">
+        <view class="input-box">
+          <text class="input-title">姓名</text>
+          <input class="input" type="text" bindinput="bindconfirmUserName" />
+        </view>
+        <view class="input-box">
+          <text class="input-title">身份证号</text>
+          <input class="input" maxlength='{{maxTextLenId}}' type="idcard" bindinput="bindconfirmIdCard" />
+        </view>
+      </block>
+      <view class="input-box" wx-if="{{!isShowGotoIndex}}">
+        <text class="input-title">手机号码</text>
+        <input class="input" type="number" maxlength='{{maxTextLenPhoto}}' bindinput="bindconfirmTel" />
+      </view>
+      <block wx:if="{{isShowAddress}}">
+        <picker
+          class="picker-box"
+          mode="multiSelector"
+          bindchange="bindMultiPickerChange"
+          bindcolumnchange="bindMultiPickerColumnChange"
+          value="{{multiIndex}}"
+          range="{{multiArray}}"
+        >
+          <view class="{{pickerTitleStyle}}"><text class="picker-title-text">领奖网点</text></view>
+          <view class="picker">
+            {{address}}
+          </view>
+        </picker>
+      </block>
+      <block wx-if="{{isShowGotoIndex}}">
+        <button wx-if="{{isShowGotoIndex}}" class='submit-btn' bindtap="gotoIndex">
+          <image class='submit-btn-bg' src="./images/go-home-btn.png"></image>
+        </button>
+      </block>
+      <block wx:else>
+        <button wx-else class='submit-btn' bindtap="postAddress">
+          <image class='submit-btn-bg' src="../lottery/images/submit_btn.png"></image>
+        </button>
+      </block>
+    </view>
+  </block>
+  <block wx:else>
+    <image class="loading-present" src="./images/drawging.gif" ></image>
+  </block>
+</view>
